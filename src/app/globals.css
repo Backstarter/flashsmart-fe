@@ -46,3 +46,64 @@ body {
   url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")format("svg");
 }
+
+.hero-card-pink{
+  background-color:hsla(339,80%,61%,1);
+  background-image:
+  radial-gradient(at 67% 98%, hsla(340,100%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 50% 23%, hsla(337,56%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+}
+
+.hero-card-teal{
+  background-color:hsla(178,81%,42%,1);
+  background-image:
+  radial-gradient(at 68% 6%, hsla(160,59%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 24% 65%, hsla(172,70%,38%,1) 0px, transparent 50%),
+  radial-gradient(at 52% 36%, hsla(195,73%,64%,1) 0px, transparent 50%);
+}
+
+.card-glow {
+  width: 0.01px;
+  height: 0.01px;
+  background-color: #ffffff00;
+  box-shadow: 0px 80px 4000px 80px rgb(255, 255, 255);
+}
+
+.login-bg{
+  background-color:hsla(271,81%,42%,1);
+  background-image:
+  radial-gradient(at 68% 6%, hsla(250,59%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 24% 65%, hsla(260,70%,38%,1) 0px, transparent 50%),
+  radial-gradient(at 52% 36%, hsla(256,73%,64%,1) 0px, transparent 50%);
+}
+
+.scaffold{
+  opacity: 25%;
+}
+
+
+.view::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+@media (min-width: 640px) {
+  .view::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+}
+
+.view::-webkit-scrollbar-track {
+  background-color: #ffffff00
+}
+
+.view::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 0.25rem;
+  margin: 5px 0;
+}
+
+.cl-avatarBox {
+  width: 2.75rem;
+  height: 2.75rem;
+}
