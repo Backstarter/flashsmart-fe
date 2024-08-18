@@ -17,17 +17,32 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background:#101010;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.eot");
+  src: url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/041a069e9ea3324a0b0c767aef875f17.svg#Fira Sans")format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
+  src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")format("svg");
 }
