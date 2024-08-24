@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col overflow-hidden">
       <nav className="flex w-full p-6 justify-between">
-        <div className="font-[Fira Sans] text-xl font-bold">FLASHSMART</div>
+        <div className="text-xl font-bold">FLASHSMART</div>
         <div className="flex gap-6">
-          <a className="flex items-center" href="/latest">
+          <a className="flex items-center" href="/app">
             <span className="mr-1 text-xl flex items-center">
               <Icon icon="material-symbols-light:add"/>
             </span>
@@ -23,9 +23,9 @@ export default function Home() {
 
       <section className="hero px-6 pt-20 w-full flex flex-col flex-1">
         <div className="max-w-screen-xl mx-auto w-full flex">
-          <span className="text-7xl w-7/12 font-[Montserrat]">Achieve Mastery, One Card at a Time</span>
+          <span className="text-7xl w-7/12 font-montserrat">Achieve Mastery, One Card at a Time</span>
           <div className="w-5/12 mt-8">
-            <p className="text-lg text-neutral-400 font-[Fira Sans]">Mastery is within your reach. Turn your study sessions into a journey toward success. Join now and start learning smarter.</p>
+            <p className="text-lg text-neutral-400">Mastery is within your reach. Turn your study sessions into a journey toward success. Join now and start learning smarter.</p>
             <button className="bg-neutral-700 p-7 py-2 rounded-full mt-5 text-lg text-white font-[Fira Sans] font-semibold">Start Now</button>
           </div>
           <img src="" alt="" />

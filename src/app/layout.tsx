@@ -17,6 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/montserrat-ace" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/fira-sans" rel="stylesheet"/>
+      </head>
       <ClerkProvider>
         <body className={inter.className}>{children}</body>
       </ClerkProvider>
