@@ -188,3 +188,43 @@ body {
 .slide-right {
   animation: slideRight 0.3s ease-in-out;
 }
+
+.cl-internal-1dauvpw{
+  display: none; /* will remove when deployed on own domain */
+}
+
+.cl-internal-1hp5nqm{
+  display: none; /* will remove when deployed on own domain */
+}
+
+.logingrad{
+  background: linear-gradient(
+    90deg,
+    rgb(172, 32, 182),
+    rgb(209, 87, 31),
+    rgb(103, 0, 176),
+    violet
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 3s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.outline-stroke {
+  -webkit-text-stroke: 0.04em rgb(255, 255, 255);
+  paint-order: stroke fill;
+}
