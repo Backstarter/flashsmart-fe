@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       keyframes: {
         fadeInOut: {
-          '0%, 100%': { opacity: 0.5 },
-          '50%': { opacity: 1 },
+          '0%, 100%': { opacity: '0.5' }, // Change 0.5 to '0.5'
+          '50%': { opacity: '1' },        // Change 1 to '1'
         },
       },
       animation: {
@@ -26,4 +26,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
