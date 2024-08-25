@@ -20,6 +20,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.cdnfonts.com/css/montserrat-ace" rel="stylesheet"/>
         <link href="https://fonts.cdnfonts.com/css/fira-sans" rel="stylesheet"/>
+        <title>FLASHSMART</title>
       </head>
       <ClerkProvider>
         <body className={inter.className}>{children}</body>
