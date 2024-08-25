@@ -28,7 +28,6 @@ export default function Home() {
             <p className="text-lg text-neutral-400">Mastery is within your reach. Turn your study sessions into a journey toward success. Join now and start learning smarter.</p>
             <button className="bg-neutral-700 p-7 py-2 rounded-full mt-5 text-lg text-white font-[Fira Sans] font-semibold">Start Now</button>
           </div>
-          <img src="" alt="" />
         </div>
         <div className="cards flex-1 flex w-full">
           <div className="flex mx-auto gap-5 relative h-min">

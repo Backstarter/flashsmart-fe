@@ -5,8 +5,8 @@ import { redirect } from 'next/navigation'
 export default async function Callback() {
   try {
     const { userId } = auth();
-    let username = await currentUser();
-    username = username.username;
+    let user = await currentUser();
+    const username = user?.username;
 
     const resp = await fetch('http://localhost:5000/add-user', {
       method: 'POST',

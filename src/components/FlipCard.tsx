@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Flashcard {
     front: string;
@@ -41,7 +42,7 @@ export default function FlippyCard({ card, isAnimating, direction }: FlippyCardP
                 {/* Front Side */}
                 <div className="flippy-front absolute w-full h-full backface-hidden flex flex-col items-center justify-center bg-neutral-500 bg-opacity-25 rounded-lg shadow-lg p-6">
                     {card.front_image_url && (
-                        <img
+                        <Image
                             src={card.front_image_url}
                             alt={card.front}
                             className="w-full h-32 object-cover rounded-md mb-4"
@@ -55,7 +56,7 @@ export default function FlippyCard({ card, isAnimating, direction }: FlippyCardP
                 {/* Back Side */}
                 <div className="flippy-back absolute w-full h-full backface-hidden flex flex-col items-center justify-center bg-neutral-500 bg-opacity-25 rounded-lg shadow-lg p-6">
                     {card.back_image_url && (
-                        <img
+                        <Image
                             src={card.back_image_url}
                             alt={card.back}
                             className="w-full h-32 object-cover rounded-md mb-4"

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import FlippyCardCarousel from '@/components/CardCarousel';
 import { prefetchDeckData } from '../../../../utils/prefetch';
+import Image from 'next/image';
 import axios from 'axios';
 
 interface Flashcard {
@@ -60,13 +61,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <div key={index} className="bg-neutral-500 bg-opacity-25 rounded-lg shadow-lg p-6 flex min-h-[200px]">
                         <div className='w-3/12 border-r-2 border-white px-3'>
                             {card.front_image_url && (
-                                <img src={card.front_image_url} alt={card.front} className="w-full h-48 object-cover rounded-lg mb-4"/>
+                                <Image src={card.front_image_url} alt={card.front} className="w-full h-48 object-cover rounded-lg mb-4"/>
                             )}
                             <p className="text-white">{card.front}</p>
                         </div>
                         <div className='w-full px-6'>
                             {card.back_image_url && (
-                                <img src={card.back_image_url} alt={card.back} className="w-full h-48 object-cover rounded-lg"/>
+                                <Image src={card.back_image_url} alt={card.back} className="w-full h-48 object-cover rounded-lg"/>
                             )}
                             <p className="text-white">{card.back}</p>
                         </div>
