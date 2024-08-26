@@ -9,12 +9,12 @@ export default function Home() {
       <nav className="flex w-full p-6 justify-between">
         <div className="text-xl font-bold">FLASHSMART</div>
         <div className="flex gap-6">
-          <a className="flex items-center" href="/app">
+          <Link className="flex items-center" href="/app/create">
             <span className="mr-1 text-xl flex items-center">
               <Icon icon="material-symbols-light:add"/>
             </span>
             Create
-          </a>
+          </Link>
 
           <SignInButton>
             <button className="bg-neutral-700 p-7 py-2 rounded-full font-semibold">Log In</button>
