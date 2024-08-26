@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="https://fonts.cdnfonts.com/css/montserrat-ace" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/steamflix-montserrat" rel="stylesheet"/>
         <link href="https://fonts.cdnfonts.com/css/fira-sans" rel="stylesheet"/>
-        <title>FLASHSMART</title>
+        <title>FlashSmart</title>
       </head>
       <ClerkProvider>
         <body className={inter.className}>{children}</body>
