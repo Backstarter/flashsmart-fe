@@ -27,7 +27,7 @@ export default function Home() {
           <span className="text-7xl w-7/12 font-montserrat">Achieve Mastery, One Card at a Time</span>
           <div className="w-5/12 mt-8">
             <p className="text-lg text-neutral-400">Mastery is within your reach. Turn your study sessions into a journey toward success. Join now and start learning smarter.</p>
-            <Link role="button" href="/app/create" className="bg-neutral-700 p-7 py-2 rounded-full mt-5 text-lg text-white font-[Fira Sans] font-semibold">Start Now</Link>
+            <Link href="/app/create"><button className="bg-neutral-700 p-7 py-2 rounded-full mt-3 text-lg text-white font-[Fira Sans] font-semibold" >Start Now</button></Link>
           </div>
         </div>
         <div className="cards flex-1 flex w-full">
