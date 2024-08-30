@@ -8,7 +8,7 @@ export default async function Callback() {
     let user = await currentUser();
     const username = user?.username;
 
-    const resp = await fetch('http://localhost:5000/add-user', {
+    const resp = await fetch('https://flashsmart.ue.r.appspot.com/add-user', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
@@ -26,4 +26,6 @@ export default async function Callback() {
   } catch (error) {
     console.error('Error sending user ID to backend:', error);
   }
+  return <div></div>;
+  
 }
