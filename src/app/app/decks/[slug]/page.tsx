@@ -25,6 +25,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     const [cards, setCards] = useState<Flashcard[]>([]);
     const [deckInfo, setDeckInfo] = useState<FlashcardDeck | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [showList, setShowList] = useState(false);
 
     useEffect(() => {
         const loadDeckData = async () => {
@@ -45,6 +46,10 @@ export default function Page({ params }: { params: { slug: string } }) {
         loadDeckData();
     }, [params.slug]);
 
+    const toggleList = () => {
+        setShowList(!showList);
+    };
+
     if (isLoading) {
         return <div></div>;
     }
@@ -56,8 +61,17 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div className="grid grid-cols-1 gap-8 w-full">
                 <FlippyCardCarousel cards={cards}/>
 
-                <h1 className="text-xl font-semibold">Terms in this deck ({deckInfo?.card_counter})</h1>
-                {cards.map((card, index) => (
+                <div className="flex justify-between items-center">
+                    <h1 className="text-xl font-semibold">Terms in this deck ({deckInfo?.card_counter})</h1>
+                    <button
+                        onClick={toggleList}
+                        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    >
+                        {showList ? 'Hide List' : 'Show List'}
+                    </button>
+                </div>
+
+                {showList && cards.map((card, index) => (
                     <div key={index} className="bg-neutral-500 bg-opacity-25 rounded-lg shadow-lg p-6 flex min-h-[200px]">
                         <div className='w-3/12 border-r-2 border-white px-3'>
                             {card.front_image_url && (
