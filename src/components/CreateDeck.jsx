@@ -51,11 +51,12 @@ export default function CreateDeck({ userID }) {
         const deckData = {
             user_id: userID,
             deck_name: deckTitle,
-            description: deckDescription
+            description: deckDescription,
+            flashcards: cards
         };
 
         try {
-            const response = await axios.post('https://flashsmart.ue.r.appspot.com/create-deck', deckData, {
+            const response = await axios.post('/api/create-deck', deckData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -63,33 +64,11 @@ export default function CreateDeck({ userID }) {
 
             if (response.status === 200) {
                 const result = response.data;
-                console.log(result)
-
-                const cardsData = {
-                    user_id: userID,
-                    deck_id: result.deck_id,
-                    flashcards: cards.map(card => ({
-                        title: card.title,
-                        front: card.front,
-                        back: card.back,
-                        front_image_url: card.front_image_url,
-                        back_image_url: card.back_image_url
-                    })),
-                }
-
-                const cardsResponse = await axios.post('https://flashsmart.ue.r.appspot.com/add-flashcards', cardsData,  {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    }
-                });
-
-                console.log(cardsResponse)
+                console.log(result);
 
                 if (shouldPractice) {
-                    // Redirect to practice page with the created deck
                     router.push(`/app/decks/${result.deck_id}`);
                 } else {
-                    // Redirect to the deck list page or show a success message
                     router.push(`/app/decks/${result.deck_id}`);
                 }
             } else {
